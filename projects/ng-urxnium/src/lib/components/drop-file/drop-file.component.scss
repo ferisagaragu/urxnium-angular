@@ -1,0 +1,66 @@
+.drop-file {
+  height: 110px;
+  background: #FAFAFA;
+  border-width: 2px;
+  border-style: dashed;
+  border-color: #212121;
+  color: #212121;
+  cursor: pointer;
+}
+
+.upload-icon-position {
+  text-align: center;
+}
+
+.upload-icon-position>label {
+  display: block;
+}
+
+.single-file {
+  margin-top: 14px;
+  margin-left: 14px;
+  margin-right: 14px;
+}
+
+.single-file-icon {
+  margin-top: -8px;
+}
+
+.single-file-button {
+  margin-top: 2px;
+}
+
+.single-file-size {
+  height: 45px!important;
+}
+
+.card-files {
+  margin: 14px;
+}
+
+.remove-button {
+  margin-top: 5px !important;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border: none;
+  min-width: 0 !important;
+  line-height: 0 !important;
+  padding: 0 !important;
+}
+
+.doc-file {
+color: #64B5F6;
+}
+
+.xls-file {
+color: #81C784;
+}
+
+.pdf-file {
+color: #E57373;
+}
+
+.image-file {
+color: #FFB74D;
+}

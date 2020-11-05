@@ -1,0 +1,93 @@
+<mat-card class="card-files" *ngFor="let file of files">
+  <div class="row single-file-size">
+    <div class="col-md-1 text-center file-icon single-file-icon">
+      <em
+        class="mdi mdi-file mdi-36px"
+        [class.mdi-file-document]="file.name.includes('.doc')"
+        [class.doc-file]="file.name.includes('.doc')"
+        [class.mdi-file-table]="file.name.includes('.xl')"
+        [class.xls-file]="file.name.includes('.xl')"
+        [class.mdi-file-pdf]="file.name.includes('.pdf')"
+        [class.pdf-file]="file.name.includes('.pdf')"
+        [class.mdi-file-image]="
+            file.name.includes('.jpg') ||
+            file.name.includes('.png') ||
+            file.name.includes('.gif')
+          "
+        [class.image-file]="
+            file.name.includes('.jpg') ||
+            file.name.includes('.png') ||
+            file.name.includes('.gif')
+          "
+      >
+      </em>
+    </div>
+
+    <div class="col-md-9 mt-2">
+      {{ file.name | slice:0:25 }}
+      {{ file.name.length > 25 ? '...' : '' }}
+    </div>
+
+    <div class="col-md-2 text-right single-file-button">
+      <button mat-button class="remove-button">
+        <em class="mdi mdi-close mdi-18px"></em>
+      </button>
+    </div>
+  </div>
+</mat-card>
+
+<div #uploadContainer class="drop-file">
+  <div
+    #uploadIcon
+    *ngIf="!file"
+    class="upload-icon-position"
+    (drop)="onDrop($event, uploadIcon, uploadContainer)"
+    (dragover)="onDragOver($event, uploadIcon, uploadContainer)"
+    (dragleave)="onDragLeave($event, uploadIcon, uploadContainer)"
+  >
+    <em class="mdi mdi-upload mdi-48px"></em>
+    <label>{{ label }}</label>
+  </div>
+
+  <mat-card *ngIf="file" class="single-file">
+    <div class="row single-file-size">
+      <div class="col-md-1 text-center file-icon single-file-icon">
+        <em
+          class="mdi mdi-file mdi-36px"
+          [class.mdi-file-document]="file.name.includes('.doc')"
+          [class.doc-file]="file.name.includes('.doc')"
+          [class.mdi-file-table]="file.name.includes('.xl')"
+          [class.xls-file]="file.name.includes('.xl')"
+          [class.mdi-file-pdf]="file.name.includes('.pdf')"
+          [class.pdf-file]="file.name.includes('.pdf')"
+          [class.mdi-file-image]="
+            file.name.includes('.jpg') ||
+            file.name.includes('.png') ||
+            file.name.includes('.gif')
+          "
+          [class.image-file]="
+            file.name.includes('.jpg') ||
+            file.name.includes('.png') ||
+            file.name.includes('.gif')
+          "
+        >
+        </em>
+      </div>
+
+      <div class="col-md-9 mt-2">
+        {{ file.name | slice:0:25 }}
+        {{ file.name.length > 25 ? '...' : '' }}
+      </div>
+
+      <div class="col-md-2 text-right single-file-button">
+        <button
+          mat-button
+          class="remove-button"
+          (click)="file = null"
+        >
+          <em class="mdi mdi-close mdi-18px"></em>
+        </button>
+      </div>
+    </div>
+  </mat-card>
+</div>
