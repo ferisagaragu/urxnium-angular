@@ -1,12 +1,27 @@
-<div class="row">
-  <div class="col-md-4">
-    <lib-drop-file
-      label="Arrastra tu archivo aquí"
-      overColor="#ee6002"
-      [accept]="['.pdf', '.jpg', '.png']"
-      multiple="true"
-    >
-    </lib-drop-file>
+<form
+  class="card card-responsive p-4"
+  [formGroup]="form"
+  (submit)="onSubmit()"
+>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <drop-file
+          label="Arrastra tu archivo aquí"
+          formControlName="userImage"
+          overColor="#1DE9B6"
+          [accept]="['.docx']"
+          [multiple]="false"
+          [error]="form.get('userImage').touched && form.get('userImage').hasError('required')"
+          errorMessage="La foto de usuario es requerida"
+        >
+        </drop-file>
+      </div>
+    </div>
   </div>
-</div>
+
+  <button type="submit">Envia</button>
+</form>
+
+
 

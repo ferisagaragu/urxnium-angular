@@ -4,6 +4,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { DropFileDirective } from './directives/drop-file.directive';
 import { MatCardModule } from '@angular/material/card';
 import { CommonModule } from '@angular/common';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 
 
@@ -15,12 +16,12 @@ import { CommonModule } from '@angular/common';
   imports: [
     MatButtonModule,
     MatCardModule,
+    MatFormFieldModule,
     CommonModule
   ],
   exports: [
     MatButtonModule,
     MatCardModule,
-
     DropFileComponent
   ]
 })

@@ -3,18 +3,32 @@
   background: #FAFAFA;
   border-width: 2px;
   border-style: dashed;
-  border-color: #212121;
-  color: #212121;
+  cursor: pointer;
+}
+
+.drop-file-error {
+  height: 110px;
+  background: #FAFAFA;
+  border-width: 2px;
+  border-style: dashed;
+  border-color: #f44336 !important;
   cursor: pointer;
 }
 
 .upload-icon-position {
   text-align: center;
+  cursor: pointer;
 }
 
 .upload-icon-position>label {
   display: block;
+  cursor: pointer;
 }
+
+.upload-icon-position-error {
+  margin-bottom: 12px;
+}
+
 
 .single-file {
   margin-top: 14px;
@@ -24,6 +38,7 @@
 
 .single-file-icon {
   margin-top: -8px;
+  color: #A1887F;
 }
 
 .single-file-button {
@@ -63,4 +78,16 @@ color: #E57373;
 
 .image-file {
 color: #FFB74D;
+}
+
+.files-multiple-container {
+  overflow-x: auto;
+  max-height: 200px;
+  margin-bottom: 5px;
+}
+
+.mat-custom-error {
+  margin-top: 1px;
+  font-size: 75% !important;
+  margin-left: 12px;
 }
