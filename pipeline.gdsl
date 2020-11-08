@@ -35,11 +35,10 @@ pipeline {
             }
         }
 
-        stage('Publish dependency in npm') {
+        stage('Copy assets folder') {
             steps {
                 bat '''
-                  cd dist/ng-urxnium
-                  npm publish
+                  xcopy "C:\\Windows\\System32\\config\\systemprofile\\AppData\\Local\\Jenkins.jenkins\\workspace\\urxnium-angular\\projects\\ng-urxnium\\src\\lib\\assets" "C:\\Windows\\System32\\config\\systemprofile\\AppData\\Local\\Jenkins.jenkins\\workspace\\urxnium-angular\\dist\\ng-urxnium\\lib\\assets" /s /i
                 '''
             }
         }
