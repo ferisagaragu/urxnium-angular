@@ -13,6 +13,7 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 bat '''
+                   nvm use 15.0.1
                    npm i
                 '''
             }
@@ -38,6 +39,7 @@ pipeline {
             steps {
                 bat '''
                   cd dist/ng-urxnium
+                  npm publish
                 '''
             }
         }
