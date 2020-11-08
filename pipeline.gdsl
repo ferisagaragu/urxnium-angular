@@ -1,0 +1,45 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Get git repository') {
+            steps {
+                git branch: 'develop',
+                credentialsId: 'gitCredential',
+                url: 'https://github.com/ferisagaragu/urxnium-angular.git'
+            }
+        }
+
+        stage('Install Dependencies') {
+            steps {
+                bat '''
+                   npm i
+                '''
+            }
+        }
+
+        stage('Generate app') {
+            steps {
+                bat '''
+                   "C:\\Users\\Qualtop\\AppData\\Roaming\\npm\\ng.cmd" build ng-urxnium --prod
+                '''
+            }
+        }
+
+        stage('Sonar Report') {
+            steps {
+                bat '''
+                   "C:\\sonar-scanner-4.2.0.1873-windows\\bin\\sonar-scanner.bat"
+                '''
+            }
+        }
+
+        stage('Publish dependency in npm') {
+            steps {
+                bat '''
+                  cd dist/ng-urxnium
+                '''
+            }
+        }
+    }
+}

@@ -1,17 +1,21 @@
 import { NgModule } from '@angular/core';
-import { DropFileComponent } from './components/drop-file/drop-file.component';
-import { MatButtonModule } from '@angular/material/button';
-import { DropFileDirective } from './directives/drop-file.directive';
-import { MatCardModule } from '@angular/material/card';
 import { CommonModule } from '@angular/common';
+
+//Urxnium
+import { DropFileComponent } from './components/drop-file/drop-file.component';
+
+//Angular Material
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { FileCardComponent } from './components/file-card/file-card.component';
 
 
 
 @NgModule({
   declarations: [
-    DropFileDirective,
-    DropFileComponent
+    DropFileComponent,
+    FileCardComponent
   ],
   imports: [
     MatButtonModule,
@@ -22,6 +26,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
   exports: [
     MatButtonModule,
     MatCardModule,
+    MatFormFieldModule,
     DropFileComponent
   ]
 })

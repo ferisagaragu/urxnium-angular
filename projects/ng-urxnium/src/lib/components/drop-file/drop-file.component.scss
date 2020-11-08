@@ -1,93 +1,40 @@
-.drop-file {
-  height: 110px;
+.upload-zone {
+  height: 100px;
+  width: 350px;
   background: #FAFAFA;
   border-width: 2px;
   border-style: dashed;
   cursor: pointer;
-}
-
-.drop-file-error {
-  height: 110px;
-  background: #FAFAFA;
-  border-width: 2px;
-  border-style: dashed;
-  border-color: #f44336 !important;
-  cursor: pointer;
-}
-
-.upload-icon-position {
   text-align: center;
+  padding: 28px;
+}
+
+.upload-zone-error {
+  height: 100px;
+  width: 350px;
+  background: #FAFAFA;
+  border-width: 2px;
+  border-style: dashed;
   cursor: pointer;
+  text-align: center;
+  padding: 28px;
+  border-color: #c62828 !important;
 }
 
-.upload-icon-position>label {
-  display: block;
-  cursor: pointer;
+.upload-zone-not-pointer {
+  cursor: context-menu;
 }
 
-.upload-icon-position-error {
-  margin-bottom: 12px;
-}
-
-
-.single-file {
-  margin-top: 14px;
-  margin-left: 14px;
-  margin-right: 14px;
-}
-
-.single-file-icon {
-  margin-top: -8px;
-  color: #A1887F;
-}
-
-.single-file-button {
-  margin-top: 2px;
-}
-
-.single-file-size {
-  height: 45px!important;
-}
-
-.card-files {
-  margin: 14px;
-}
-
-.remove-button {
-  margin-top: 5px !important;
-  width: 30px;
-  height: 30px;
-  background: transparent;
-  border: none;
-  min-width: 0 !important;
-  line-height: 0 !important;
-  padding: 0 !important;
-}
-
-.doc-file {
-color: #64B5F6;
-}
-
-.xls-file {
-color: #81C784;
-}
-
-.pdf-file {
-color: #E57373;
-}
-
-.image-file {
-color: #FFB74D;
-}
-
-.files-multiple-container {
+.multiple-file-zone {
   overflow-x: auto;
   max-height: 200px;
+  max-width: 350px;
   margin-bottom: 5px;
+  background: #FAFAFA;
 }
 
-.mat-custom-error {
-  margin-top: 1px;
-  font-size: 75% !important;
-  margin-left: 12px;
+.mat-error {
+  margin-left: 10px;
+  font-size: 75%;
+  color: #c62828 !important;
 }

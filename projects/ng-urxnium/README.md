@@ -2,22 +2,18 @@
 
 This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
 
-## Code scaffolding
+## Components
 
-Run `ng generate component component-name --project ng-urxnium` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ng-urxnium`.
-> Note: Don't forget to add `--project ng-urxnium` or else it will be added to the default project in your `angular.json` file. 
+#### -drop-file `created at 06-11-2020`
 
-## Build
-
-Run `ng build ng-urxnium` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Publishing
-
-After building your library with `ng build ng-urxnium`, go to the dist folder `cd dist/ng-urxnium` and run `npm publish`.
-
-## Running unit tests
-
-Run `ng test ng-urxnium` to execute the unit tests via [Karma](https://karma-runner.github.io).
+| Attribute | Type | Description | Default |
+|-----------|------|-------------|---------|
+|label|`string`|Este mensaje saldra abajo del icono de subida del archivo|`undefined`|
+|overColor|`string`|Este es el color que aparecera cuando un archivo este subre el documento|`#2196F3`|
+|accept|`Array<string>`|Son los tipos de archivos que se aceptaran .docx, .xls, .png, .jpg, .gif o cualquier extension|`[]`|
+|multiple|`boolean`|Este indica si el input file aceptara multiples archivos o no|`false`|
+|error|`boolean`|Este pondra el componente en modo error|`false`|
+|errorMessage|`string`|Este es el mensaje que saldra cuando el componente este en modo error|`undefined`|
 
 ## Further help
 
