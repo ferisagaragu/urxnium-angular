@@ -1,0 +1,60 @@
+.file-card {
+  margin-top: -14px;
+  margin-left: -14px;
+  margin-right: -14px;
+  cursor: context-menu;
+}
+
+.file-card-icon {
+  color: #A1887F;
+  padding-top: 6px;
+}
+
+.file-card-text {
+  margin-top: 7px;
+  margin-left: -10px;
+}
+
+.file-card-button {
+  margin-top: -4px;
+}
+
+.file-card-button>button {
+  margin-right: -15px;
+}
+
+.doc-file {
+  color: #64B5F6;
+}
+
+.xls-file {
+  color: #81C784;
+}
+
+.pdf-file {
+  color: #E57373;
+}
+
+.image-file {
+  color: #FFB74D;
+}
+
+.remove-button {
+  margin-top: 5px !important;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border: none;
+  min-width: 0 !important;
+  line-height: 0 !important;
+  padding: 0 !important;
+}
+
+.file-card-multiple-remove {
+  margin-top: -4px;
+}
+
+.file-card-multiple {
+  margin: 10px;
+  cursor: context-menu;
+}

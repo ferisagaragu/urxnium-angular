@@ -1,0 +1,44 @@
+<mat-card [class.file-card-multiple]="multiple" [class.file-card]="!multiple">
+  <div class="row">
+    <div class="col-2 text-center file-card-icon">
+      <em
+        class="mdi mdi-file mdi-36px"
+        [class.mdi-file-document]="name.includes('.doc')"
+        [class.doc-file]="name.includes('.doc')"
+        [class.mdi-file-table]="name.includes('.xl')"
+        [class.xls-file]="name.includes('.xl')"
+        [class.mdi-file-pdf]="name.includes('.pdf')"
+        [class.pdf-file]="name.includes('.pdf')"
+        [class.mdi-file-image]="
+          name.includes('.jpg') ||
+          name.includes('.png') ||
+          name.includes('.gif')
+        "
+        [class.image-file]="
+          name.includes('.jpg') ||
+          name.includes('.png') ||
+          name.includes('.gif')
+        "
+      >
+      </em>
+    </div>
+
+    <div
+      class="col-6 file-card-text"
+      [title]="name"
+    >
+      {{ name | slice:0: 15 }}
+      {{ name.length > 15 ? '...' : '' }}
+    </div>
+
+    <div class="col-4 text-right file-card-button">
+      <button
+        mat-button
+        class="remove-button"
+        (click)="onRemove()"
+      >
+        <em class="mdi mdi-close mdi-18px"></em>
+      </button>
+    </div>
+  </div>
+</mat-card>

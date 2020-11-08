@@ -1,5 +1,5 @@
-import { Component, forwardRef, Inject, Input } from '@angular/core';
-import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { Component, forwardRef, Host, Input, Optional, SkipSelf } from '@angular/core';
+import { ControlContainer, ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
   selector: 'drop-file',
@@ -25,12 +25,18 @@ export class DropFileComponent implements ControlValueAccessor {
   @Input() accept: Array<string>;
   @Input() error: boolean;
   @Input() errorMessage: string;
+  @Input() formControlName: string;
 
   private onChange: Function;
   private onTouch: Function;
   private value: File | Array<File>;
 
-  constructor() {
+  constructor(
+    @Optional()
+    @Host()
+    @SkipSelf()
+    private controlContainer: ControlContainer
+  ) {
     this.files = [];
     this.accept = [];
     this.multiple = false;
@@ -39,6 +45,7 @@ export class DropFileComponent implements ControlValueAccessor {
     this.onTouch = () => { };
     this.value = [];
     this.overColor = '#2196F3';
+    this.error = false;
   }
 
   registerOnChange(fn: any): void {
@@ -61,30 +68,30 @@ export class DropFileComponent implements ControlValueAccessor {
     }
   }
 
-  onDrop(event: DragEvent, uploadIcon: HTMLElement, uploadContainer: HTMLElement): void {
+  onDrop(event: DragEvent, uploadZone: HTMLElement): void {
     event.preventDefault();
     event.stopPropagation();
 
     let files = event.dataTransfer.files;
     this.addFileOrFiles(files);
-    uploadIcon.style.color = '#212121';
-    uploadContainer.style.borderColor = '#212121';
+    uploadZone.style.color = '#212121';
+    uploadZone.style.borderColor = '#212121';
   }
 
-  onDragOver(event: DragEvent, uploadIcon: HTMLElement, uploadContainer: HTMLElement): void {
+  onDragOver(event: DragEvent, uploadZone: HTMLElement): void {
     event.preventDefault();
     event.stopPropagation();
 
-    uploadIcon.style.color = this.overColor;
-    uploadContainer.style.borderColor = this.overColor;
+    uploadZone.style.color = this.overColor;
+    uploadZone.style.borderColor = this.overColor;
   }
 
-  onDragLeave(event: DragEvent, uploadIcon: HTMLElement, uploadContainer: HTMLElement): void {
+  onDragLeave(event: DragEvent, uploadZone: HTMLElement): void {
     event.preventDefault();
     event.stopPropagation();
 
-    uploadIcon.style.color = '#212121';
-    uploadContainer.style.borderColor = '#212121';
+    uploadZone.style.color = '#212121';
+    uploadZone.style.borderColor = '#212121';
   }
 
   onClick(inputFile: HTMLInputElement): void {
@@ -110,6 +117,17 @@ export class DropFileComponent implements ControlValueAccessor {
   removeSimpleFile(): void {
     this.file = null;
     this.setFormValue(false);
+  }
+
+  isInvalidForm(): boolean {
+    if (this.controlContainer && this.formControlName) {
+      return this.controlContainer
+        .control
+        .get(this.formControlName)
+        .invalid;
+    }
+
+    return false;
   }
 
   private addMultipleFiles(files: FileList): void {

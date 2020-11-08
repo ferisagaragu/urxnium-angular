@@ -19,11 +19,11 @@ export class AppComponent {
 
   private createForm(): void {
     const file1 = new File([], 'demo file 1');
-    const file2 = new File([], 'demo file 2');
+    const file2 = new File([], 'demo file 2sdfdfdsfsdfsfsdfsdfsdsadsad.png');
     const file3 = new File([], 'demo file 3.jpg');
 
     this.form = this.formBuilder.group({
-      userImage: [file2, Validators.compose([Validators.required])]
+      userImage: [file3, Validators.compose([Validators.required])]
     });
   }
 
