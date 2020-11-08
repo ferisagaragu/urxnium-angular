@@ -27,8 +27,8 @@
       class="col-6 file-card-text"
       [title]="name"
     >
-      {{ name | slice:0: 15 }}
-      {{ name.length > 15 ? '...' : '' }}
+      {{ name | slice:0: 12 }}
+      {{ name.length > 12 ? '...' : '' }}
     </div>
 
     <div class="col-4 text-right file-card-button">
