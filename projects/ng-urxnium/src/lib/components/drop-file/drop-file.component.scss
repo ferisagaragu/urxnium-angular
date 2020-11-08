@@ -1,6 +1,7 @@
 .upload-zone {
   height: 100px;
-  width: 350px;
+  width: 100%;
+  max-width: 340px;
   background: #FAFAFA;
   border-width: 2px;
   border-style: dashed;
@@ -11,7 +12,8 @@
 
 .upload-zone-error {
   height: 100px;
-  width: 350px;
+  width: 100%;
+  max-width: 340px;
   background: #FAFAFA;
   border-width: 2px;
   border-style: dashed;
@@ -28,7 +30,8 @@
 .multiple-file-zone {
   overflow-x: auto;
   max-height: 200px;
-  max-width: 350px;
+  width: 100%;
+  max-width: 340px;
   margin-bottom: 5px;
   background: #FAFAFA;
 }
