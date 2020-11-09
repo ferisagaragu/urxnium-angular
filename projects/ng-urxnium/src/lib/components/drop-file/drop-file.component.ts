@@ -26,7 +26,7 @@ export class DropFileComponent implements ControlValueAccessor {
   @Input() error: boolean;
   @Input() errorMessage: string;
   @Input() formControlName: string;
-  @Output() change: EventEmitter<File | Array<File>>;
+  @Output() changeFile: EventEmitter<File | Array<File>>;
 
   private onChange: Function;
   private onTouch: Function;
@@ -47,7 +47,7 @@ export class DropFileComponent implements ControlValueAccessor {
     this.value = [];
     this.overColor = '#2196F3';
     this.error = false;
-    this.change = new EventEmitter<File | Array<File>>();
+    this.changeFile = new EventEmitter<File | Array<File>>();
   }
 
   registerOnChange(fn: any): void {
@@ -174,7 +174,7 @@ export class DropFileComponent implements ControlValueAccessor {
 
     this.onTouch();
     this.onChange(this.value);
-    this.change.emit(this.value);
+    this.changeFile.emit(this.value);
   }
 
   private acceptFileType(): string {
