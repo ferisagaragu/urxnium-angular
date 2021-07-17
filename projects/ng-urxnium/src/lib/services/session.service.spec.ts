@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { NgUrxniumService } from './ng-urxnium.service';
+import { SessionService } from './session.service';
 
-describe('NgUrxniumService', () => {
-  let service: NgUrxniumService;
+describe('SessionService', () => {
+  let service: SessionService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(NgUrxniumService);
+    service = TestBed.inject(SessionService);
   });
 
   it('should be created', () => {

@@ -1,0 +1,19 @@
+{
+  "name": "ng-urxnium",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^12.1.2",
+    "@angular/core": "^12.1.2"
+  },
+  "dependencies": {
+    "tslib": "^2.2.0",
+    "sweetalert2": "^11.0.18"
+  },
+  "main": "bundles/ng-urxnium.umd.js",
+  "module": "fesm2015/ng-urxnium.js",
+  "es2015": "fesm2015/ng-urxnium.js",
+  "esm2015": "esm2015/ng-urxnium.js",
+  "fesm2015": "fesm2015/ng-urxnium.js",
+  "typings": "ng-urxnium.d.ts",
+  "sideEffects": false
+}

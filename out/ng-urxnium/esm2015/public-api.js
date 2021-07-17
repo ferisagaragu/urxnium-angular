@@ -1,0 +1,10 @@
+/*
+ * Public API Surface of ng-urxnium
+ */
+//Interfaces
+export * from './lib/interfaces/session';
+//Services
+export * from './lib/services/session.service';
+export * from './lib/services/sign-in-window.service';
+//Models
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHVibGljLWFwaS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3Byb2plY3RzL25nLXVyeG5pdW0vc3JjL3B1YmxpYy1hcGkudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7O0dBRUc7QUFFSCxZQUFZO0FBQ1osY0FBYywwQkFBMEIsQ0FBQztBQUV6QyxVQUFVO0FBQ1YsY0FBYyxnQ0FBZ0MsQ0FBQztBQUMvQyxjQUFjLHVDQUF1QyxDQUFDO0FBRXRELFFBQVEiLCJzb3VyY2VzQ29udGVudCI6WyIvKlxuICogUHVibGljIEFQSSBTdXJmYWNlIG9mIG5nLXVyeG5pdW1cbiAqL1xuXG4vL0ludGVyZmFjZXNcbmV4cG9ydCAqIGZyb20gJy4vbGliL2ludGVyZmFjZXMvc2Vzc2lvbic7XG5cbi8vU2VydmljZXNcbmV4cG9ydCAqIGZyb20gJy4vbGliL3NlcnZpY2VzL3Nlc3Npb24uc2VydmljZSc7XG5leHBvcnQgKiBmcm9tICcuL2xpYi9zZXJ2aWNlcy9zaWduLWluLXdpbmRvdy5zZXJ2aWNlJztcblxuLy9Nb2RlbHNcbiJdfQ==
