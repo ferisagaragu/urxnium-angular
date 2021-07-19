@@ -19,14 +19,14 @@ export class SweetAlert2Service {
       confirmButtonText, cancelButtonText,
       focusConfirm, focusCancel,
       showCancelButton, theme,
-      html, showCloseButton
+      html, showCloseButton, materialButtonsColor
     } = message;
     const lang = navigator.language;
 
     Swal.fire({
       icon,
       title,
-      text,
+      text: text ? text : '',
       footer,
       confirmButtonText: confirmButtonText ? confirmButtonText : lang.includes('es-') ? 'Aceptar' : undefined,
       cancelButtonText: cancelButtonText ? cancelButtonText : lang.includes('es-') ? 'Cancelar' : undefined,
@@ -61,7 +61,28 @@ export class SweetAlert2Service {
           if (section) {
             section['style'].justifyContent = 'flex-end';
             section['style'].padding = '0';
+
+            if (materialButtonsColor) {
+              const style = document.createElement('style');
+
+              style.innerHTML = `
+                .swal-material-button {
+                  color: ${materialButtonsColor} !important;
+                }
+
+                .swal-material-button::before {
+                  background: ${materialButtonsColor} !important;
+                }
+
+                .swal-material-button::after {
+                  background: ${materialButtonsColor} !important;
+                }
+              `;
+
+              document.head.appendChild(style);
+            }
           }
+
 
           popup['style'].paddingLeft = '20px';
           popup['style'].paddingRight = '20px';

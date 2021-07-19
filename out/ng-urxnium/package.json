@@ -6,8 +6,7 @@
     "@angular/core": "^12.1.2"
   },
   "dependencies": {
-    "tslib": "^2.2.0",
-    "sweetalert2": "^11.0.18"
+    "tslib": "^2.2.0"
   },
   "main": "bundles/ng-urxnium.umd.js",
   "module": "fesm2015/ng-urxnium.js",

@@ -15,4 +15,5 @@ export interface SweetAlert2Message {
   focusConfirm?: boolean,
   focusCancel?: boolean,
   theme?: 'sweetalert2' | 'material'
+  materialButtonsColor?: string
 }

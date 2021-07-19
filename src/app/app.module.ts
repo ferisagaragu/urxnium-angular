@@ -2,13 +2,19 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { DemoComponent } from './demo/demo.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { UrxAlertModule } from 'ng-urxnium';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DemoComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule,
+    UrxAlertModule
   ],
   providers: [],
   bootstrap: [AppComponent]
