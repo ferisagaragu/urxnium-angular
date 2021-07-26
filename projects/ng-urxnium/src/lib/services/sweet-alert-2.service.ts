@@ -5,9 +5,7 @@ import { materialDialog } from '../templates/material-dialog.template';
 
 declare const Swal;
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class SweetAlert2Service {
 
   fire(message: SweetAlert2Message): Observable<boolean> {

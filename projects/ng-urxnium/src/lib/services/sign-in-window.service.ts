@@ -1,11 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
-declare const Swal;
-
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class SignInWindowService {
 
   open(url: string, event?: MouseEvent): Observable<string> {

@@ -1,3 +1,18 @@
+.urx-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.urx-col-1 {
+  flex: 0 0 auto;
+  width: 8.333333%;
+}
+
+.urx-col-11 {
+  flex: 0 0 auto;
+  width: 91.666667%;
+}
+
 .swal-material-container {
   text-align: left;
   color: #263238;

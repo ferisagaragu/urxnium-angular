@@ -372,3 +372,43 @@
   color: #9e9e9e;
   pointer-events: none;
 }
+
+.scroll::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: #F5F5F5;
+}
+
+.scroll::-webkit-scrollbar {
+  width: 6px;
+  background-color: #F5F5F5;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+  background-color: #BDBDBD;
+  border-radius: 2px;
+}
+
+.mat-success-text {
+  color: #4CAF50;
+}
+
+.mat-neutral-text {
+  color: #03A9F4;
+}
+
+.mat-warn-text {
+  color: #FFC107;
+}
+
+.mat-error-text {
+  color: #F44336;
+}
+
+.not-click {
+  cursor: default;
+  pointer-events: none;
+}
+
+.pointer {
+  cursor: pointer;
+}
