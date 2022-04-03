@@ -1,0 +1,115 @@
+{
+  "name": "SweetAlert2Service",
+  "access": "service",
+  "bookmark": "",
+  "description": "Con la ayuda de Sweetalert2 Ng-uranium ha generado alertas embebidas con la versión Material Design para poder adaptar las alertas a cualquier tipo sistemas",
+  "html": null,
+  "exampleCodes": [
+    {
+      "title": "Añadiendo el módulo de alertas",
+      "description": "Para poder utilizar las alertas de Ng-urxnium es necesario incluir el módulo UrxAlertModule",
+      "code": "import { NgModule } from '@angular/core';\n\nimport { UrxAlertModule } from 'ng-urxnium';\n\n@NgModule({\n  imports: [\n    UrxAlertModule\n  ],\n  ...\n})\nexport class AppModule { }",
+      "out": null,
+      "language": "javascript"
+    },{
+      "title": "Invocando una alerta",
+      "description": "Para hacer que una alerta visible, al igual que con SweetAlert2 es necesario utilizar el método fire, con la diferencia de que ahora nuestro diálogo será más inteligente y estará más acorde al Framework de Angular",
+      "code": "import { NgModule } from '@angular/core';\n\nimport { UrxAlertModule } from 'ng-urxnium';\n\n@NgModule({\n  imports: [\n    UrxAlertModule\n  ],\n  ...\n})\nexport class AppModule { }",
+      "out": "  constructor(private swal: SweetAlert2Service) {\n    swal.fire({\n      theme: 'material',\n      icon: 'question',\n      title: 'Hola',\n      text: 'como estas primo',\n      materialButtonsColor: 'orange'\n    }).subscribe(resp => {\n      console.log(resp);\n    });\n  }",
+      "language": "javascript"
+    }
+  ],
+  "attributes": [
+    {
+      "name": "icon",
+      "type": "'success' | 'error' | 'warning' | 'info' | 'question'",
+      "description": "Tipo de alerta",
+      "default": "undefined"
+    },{
+      "name": "title",
+      "type": "string",
+      "description": "Titulo de la alerta",
+      "default": "undefined"
+    },{
+      "name": "text",
+      "type": "string",
+      "description": "Detalle de la alerta",
+      "default": "undefined"
+    },{
+      "name": "text",
+      "type": "string",
+      "description": "Detalle de la alerta",
+      "default": "undefined"
+    },{
+      "name": "html",
+      "type": "HTMLElement | string",
+      "description": "Sección de html libre",
+      "default": "undefined"
+    },{
+      "name": "footer",
+      "type": "string",
+      "description": "Texto del pie de la alerta",
+      "default": "undefined"
+    },{
+      "name": "confirmButtonText",
+      "type": "string",
+      "description": "Texto del bóton de confirmar",
+      "default": "undefined"
+    },{
+      "name": "cancelButtonText",
+      "type": "string",
+      "description": "Texto del bóton de cancelar",
+      "default": "undefined"
+    },{
+      "name": "showCancelButton",
+      "type": "boolean",
+      "description": "Mostrar bóton de cancelar",
+      "default": "false"
+    },{
+      "name": "showCloseButton",
+      "type": "boolean",
+      "description": "Mostrar bóton de cerrar",
+      "default": "false"
+    },{
+      "name": "confirmButtonColor",
+      "type": "string",
+      "description": "Color del bóton de confiramar",
+      "default": "undefined"
+    },{
+      "name": "cancelButtonColor",
+      "type": "string",
+      "description": "Color del bóton de cancelar",
+      "default": "undefined"
+    },{
+      "name": "reverseButtons",
+      "type": "string",
+      "description": "Invertir bótones de cancelar y confirmar",
+      "default": "false"
+    },{
+      "name": "allowOutsideClick",
+      "type": "boolean",
+      "description": "No permitir cerrar la alerta al dar click fuera de ella",
+      "default": "false"
+    },{
+      "name": "focusConfirm",
+      "type": "boolean",
+      "description": "Poner el focus en el bóton de confirmar",
+      "default": "false"
+    },{
+      "name": "focusCancel",
+      "type": "boolean",
+      "description": "Poner el focus en el bóton de cancelar",
+      "default": "true"
+    },{
+      "name": "theme",
+      "type": "'sweetalert2' | 'material'",
+      "description": "Tipo de tema, SweetAlert2 o Material",
+      "default": "sweetalert2"
+    },{
+      "name": "materialButtonsColor",
+      "type": "string",
+      "description": "Color de los bótones cuando la alerta es material design",
+      "default": "undefined"
+    }
+  ]
+}

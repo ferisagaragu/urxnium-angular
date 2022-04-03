@@ -1,0 +1,374 @@
+{
+  "functional": {
+    "title": "Ng-urxnium",
+    "description": "Libreria de componentes graficos para Angular <a href=\"google.com\">Link</a>",
+    "icon": "",
+    "version": "2.2.5",
+    "bookmarks": [],
+    "src": [
+      {
+        "name": "UrxGridModule",
+        "elements": [
+          {
+            "name": "inject-urxnium-grid.css",
+            "access": "stylesheet",
+            "bookmark": "",
+            "description": "La hoja de estilos urxnium-grid.css nos ayudará a facilitar la visión de diferentes componentes de acuerdo a la necesitada de la pantalla, así como la integración de diferentes estilos con los que no cuentan muchas librerías modernas",
+            "html": null,
+            "exampleCodes": [
+              {
+                "title": "urxnium-grid.css",
+                "description": "Para hacer uso de los estilos que urxnium-grid nos ofrece es necesario incorporar el UrxGridModule el cual inyecta automáticamente los estilos en nuestro proyecto",
+                "code": "import { NgModule } from '@angular/core';\n\nimport { UrxGridModule } from 'ng-urxnium';\n\n@NgModule({\n  imports: [\n    UrxGridModule\n  ],\n  ...\n})\nexport class AppModule { }",
+                "out": ".urx-row {\n  display: flex;\n  flex-wrap: wrap;\n}\n\n.urx-col-1 {\n  flex: 0 0 auto;\n  width: 8.333333%;\n}\n\n.urx-col-2 {\n  flex: 0 0 auto;\n  width: 16.666667%;\n}\n\n.urx-col-3 {\n  flex: 0 0 auto;\n  width: 25%;\n}\n\n.urx-col-4 {\n  flex: 0 0 auto;\n  width: 33.3333333333%;\n}\n\n.urx-col-5 {\n  flex: 0 0 auto;\n  width: 41.666667%;\n}\n\n.urx-col-6 {\n  flex: 0 0 auto;\n  width: 50%;\n}\n\n.urx-col-7 {\n  flex: 0 0 auto;\n  width: 58.333333%;\n}\n\n.urx-col-8 {\n  flex: 0 0 auto;\n  width: 66.6666666667%;\n}\n\n.urx-col-9 {\n  flex: 0 0 auto;\n  width: 75%;\n}\n\n.urx-col-10 {\n  flex: 0 0 auto;\n  width: 83.333333%;\n}\n\n.urx-col-11 {\n  flex: 0 0 auto;\n  width: 91.666667%;\n}\n\n.urx-col-12 {\n  flex: 0 0 auto;\n  width: 100%;\n}\n\n@media (min-width: 700px) {\n  .mobile-show {\n    display: none !important;\n  }\n}\n\n@media (max-width: 699px) {\n  .mobile-not-show {\n    display: none !important;\n  }\n\n  .mobile-w-100 {\n    width: 100% !important;\n  }\n\n  .mobile-w-75 {\n    width: 75% !important;\n  }\n\n  .mobile-w-50 {\n    width: 50% !important;\n  }\n\n  .mobile-w-25 {\n    width: 25% !important;\n  }\n\n  .mobile-h-100 {\n    height: 100% !important;\n  }\n\n  .mobile-h-75 {\n    height: 75% !important;\n  }\n\n  .mobile-h-50 {\n    height: 50% !important;\n  }\n\n  .mobile-h-25 {\n    height: 25% !important;\n  }\n\n  .mobile-m-0 {\n    margin: 0 !important;\n  }\n\n  .mobile-mt-0 {\n    margin-top: 0 !important;\n  }\n\n  .mobile-mb-0 {\n    margin-bottom: 0 !important;\n  }\n\n  .mobile-ml-0 {\n    margin-left: 0 !important;\n  }\n\n  .mobile-mr-0 {\n    margin-right: 0 !important;\n  }\n\n  .mobile-m-1 {\n    margin: 0.25rem !important;\n  }\n\n  .mobile-mt-1 {\n    margin-top: 0.25rem !important;\n  }\n\n  .mobile-mb-1 {\n    margin-bottom: 0.25rem !important;\n  }\n\n  .mobile-ml-1 {\n    margin-left: 0.25rem !important;\n  }\n\n  .mobile-mr-1 {\n    margin-right: 0.25rem !important;\n  }\n\n  .mobile-m-2 {\n    margin: 0.5rem !important;\n  }\n\n  .mobile-mt-2 {\n    margin-top: 0.5rem !important;\n  }\n\n  .mobile-mb-2 {\n    margin-bottom: 0.5rem !important;\n  }\n\n  .mobile-ml-2 {\n    margin-left: 0.5rem !important;\n  }\n\n  .mobile-mr-2 {\n    margin-right: 0.5rem !important;\n  }\n\n  .mobile-m-3 {\n    margin: 1rem !important;\n  }\n\n  .mobile-mt-3 {\n    margin-top: 1rem !important;\n  }\n\n  .mobile-mb-3 {\n    margin-bottom: 1rem !important;\n  }\n\n  .mobile-ml-3 {\n    margin-left: 1rem !important;\n  }\n\n  .mobile-mr-3 {\n    margin-right: 1rem !important;\n  }\n\n  .mobile-m-4 {\n    margin: 1.5rem !important;\n  }\n\n  .mobile-mt-4 {\n    margin-top: 1.5rem !important;\n  }\n\n  .mobile-mb-4 {\n    margin-bottom: 1.5rem !important;\n  }\n\n  .mobile-ml-4 {\n    margin-left: 1.5rem !important;\n  }\n\n  .mobile-mr-4 {\n    margin-right: 1.5rem !important;\n  }\n\n  .mobile-m-5 {\n    margin: 1.5rem !important;\n  }\n\n  .mobile-mt-5 {\n    margin-top: 3rem !important;\n  }\n\n  .mobile-mb-5 {\n    margin-bottom: 3rem !important;\n  }\n\n  .mobile-ml-5 {\n    margin-left: 3rem !important;\n  }\n\n  .mobile-mr-5 {\n    margin-right: 3rem !important;\n  }\n\n  .mobile-p-0 {\n    padding: 0 !important;\n  }\n\n  .mobile-pt-0 {\n    padding-top: 0 !important;\n  }\n\n  .mobile-pb-0 {\n    padding-bottom: 0 !important;\n  }\n\n  .mobile-pl-0 {\n    padding-left: 0 !important;\n  }\n\n  .mobile-pr-0 {\n    padding-right: 0 !important;\n  }\n\n  .mobile-p-1 {\n    padding: 0.25rem !important;\n  }\n\n  .mobile-pt-1 {\n    padding-top: 0.25rem !important;\n  }\n\n  .mobile-pb-1 {\n    padding-bottom: 0.25rem !important;\n  }\n\n  .mobile-pl-1 {\n    padding-left: 0.25rem !important;\n  }\n\n  .mobile-pr-1 {\n    padding-right: 0.25rem !important;\n  }\n\n  .mobile-p-2 {\n    padding: 0.5rem !important;\n  }\n\n  .mobile-pt-2 {\n    padding-top: 0.5rem !important;\n  }\n\n  .mobile-pb-2 {\n    padding-bottom: 0.5rem !important;\n  }\n\n  .mobile-pl-2 {\n    padding-left: 0.5rem !important;\n  }\n\n  .mobile-pr-2 {\n    padding-right: 0.5rem !important;\n  }\n\n  .mobile-p-3 {\n    padding: 1rem !important;\n  }\n\n  .mobile-pt-3 {\n    padding-top: 1rem !important;\n  }\n\n  .mobile-pb-3 {\n    padding-bottom: 1rem !important;\n  }\n\n  .mobile-pl-3 {\n    padding-left: 1rem !important;\n  }\n\n  .mobile-pr-3 {\n    padding-right: 1rem !important;\n  }\n\n  .mobile-p-4 {\n    padding: 1.5rem !important;\n  }\n\n  .mobile-pt-4 {\n    padding-top: 1.5rem !important;\n  }\n\n  .mobile-pb-4 {\n    padding-bottom: 1.5rem !important;\n  }\n\n  .mobile-pl-4 {\n    padding-left: 1.5rem !important;\n  }\n\n  .mobile-pr-4 {\n    padding-right: 1.5rem !important;\n  }\n\n  .mobile-p-5 {\n    padding: 1.5rem !important;\n  }\n\n  .mobile-pt-5 {\n    padding-top: 3rem !important;\n  }\n\n  .mobile-pb-5 {\n    padding-bottom: 3rem !important;\n  }\n\n  .mobile-pl-5 {\n    padding-left: 3rem !important;\n  }\n\n  .mobile-pr-5 {\n    padding-right: 3rem !important;\n  }\n\n  .mobile-text-center {\n    text-align: center !important;\n  }\n\n  .mobile-text-left {\n    text-align: left !important;\n  }\n\n  .mobile-text-right {\n    text-align: right !important;\n  }\n}\n\n.mdi-26px {\n  font-size: 26px !important;\n}\n\n.mdi-input-icon {\n  color: #757575 !important;\n  font-size: 26px !important;\n}\n\n.disabled-link {\n  color: #9e9e9e;\n  pointer-events: none;\n}\n\n.scroll::-webkit-scrollbar-track {\n  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);\n  background-color: #F5F5F5;\n}\n\n.scroll::-webkit-scrollbar {\n  width: 6px;\n  background-color: #F5F5F5;\n}\n\n.scroll::-webkit-scrollbar-thumb {\n  background-color: #BDBDBD;\n  border-radius: 2px;\n}\n\n.mat-success-text {\n  color: #4CAF50;\n}\n\n.mat-neutral-text {\n  color: #03A9F4;\n}\n\n.mat-warn-text {\n  color: #FFC107;\n}\n\n.mat-error-text {\n  color: #F44336;\n}\n\n.not-click {\n  cursor: default;\n  pointer-events: none;\n}\n\n.pointer {\n  cursor: pointer;\n}\n",
+                "language": "javascript"
+              }
+            ],
+            "attributes": []
+          }
+        ]
+      },
+      {
+        "name": "UrxAlertModule",
+        "elements": [
+          {
+            "name": "SweetAlert2Service",
+            "access": "service",
+            "bookmark": "",
+            "description": "Con la ayuda de Sweetalert2 Ng-uranium ha generado alertas embebidas con la versión Material Design para poder adaptar las alertas a cualquier tipo sistemas",
+            "html": null,
+            "exampleCodes": [
+              {
+                "title": "Añadiendo el módulo de alertas",
+                "description": "Para poder utilizar las alertas de Ng-urxnium es necesario incluir el módulo UrxAlertModule",
+                "code": "import { NgModule } from '@angular/core';\n\nimport { UrxAlertModule } from 'ng-urxnium';\n\n@NgModule({\n  imports: [\n    UrxAlertModule\n  ],\n  ...\n})\nexport class AppModule { }",
+                "out": null,
+                "language": "javascript"
+              },
+              {
+                "title": "Invocando una alerta",
+                "description": "Para hacer que una alerta visible, al igual que con SweetAlert2 es necesario utilizar el método fire, con la diferencia de que ahora nuestro diálogo será más inteligente y estará más acorde al Framework de Angular",
+                "code": "import { NgModule } from '@angular/core';\n\nimport { UrxAlertModule } from 'ng-urxnium';\n\n@NgModule({\n  imports: [\n    UrxAlertModule\n  ],\n  ...\n})\nexport class AppModule { }",
+                "out": "  constructor(private swal: SweetAlert2Service) {\n    swal.fire({\n      theme: 'material',\n      icon: 'question',\n      title: 'Hola',\n      text: 'como estas primo',\n      materialButtonsColor: 'orange'\n    }).subscribe(resp => {\n      console.log(resp);\n    });\n  }",
+                "language": "javascript"
+              }
+            ],
+            "attributes": [
+              {
+                "name": "icon",
+                "type": "'success' | 'error' | 'warning' | 'info' | 'question'",
+                "description": "Tipo de alerta",
+                "default": "undefined"
+              },
+              {
+                "name": "title",
+                "type": "string",
+                "description": "Titulo de la alerta",
+                "default": "undefined"
+              },
+              {
+                "name": "text",
+                "type": "string",
+                "description": "Detalle de la alerta",
+                "default": "undefined"
+              },
+              {
+                "name": "text",
+                "type": "string",
+                "description": "Detalle de la alerta",
+                "default": "undefined"
+              },
+              {
+                "name": "html",
+                "type": "HTMLElement | string",
+                "description": "Sección de html libre",
+                "default": "undefined"
+              },
+              {
+                "name": "footer",
+                "type": "string",
+                "description": "Texto del pie de la alerta",
+                "default": "undefined"
+              },
+              {
+                "name": "confirmButtonText",
+                "type": "string",
+                "description": "Texto del bóton de confirmar",
+                "default": "undefined"
+              },
+              {
+                "name": "cancelButtonText",
+                "type": "string",
+                "description": "Texto del bóton de cancelar",
+                "default": "undefined"
+              },
+              {
+                "name": "showCancelButton",
+                "type": "boolean",
+                "description": "Mostrar bóton de cancelar",
+                "default": "false"
+              },
+              {
+                "name": "showCloseButton",
+                "type": "boolean",
+                "description": "Mostrar bóton de cerrar",
+                "default": "false"
+              },
+              {
+                "name": "confirmButtonColor",
+                "type": "string",
+                "description": "Color del bóton de confiramar",
+                "default": "undefined"
+              },
+              {
+                "name": "cancelButtonColor",
+                "type": "string",
+                "description": "Color del bóton de cancelar",
+                "default": "undefined"
+              },
+              {
+                "name": "reverseButtons",
+                "type": "string",
+                "description": "Invertir bótones de cancelar y confirmar",
+                "default": "false"
+              },
+              {
+                "name": "allowOutsideClick",
+                "type": "boolean",
+                "description": "No permitir cerrar la alerta al dar click fuera de ella",
+                "default": "false"
+              },
+              {
+                "name": "focusConfirm",
+                "type": "boolean",
+                "description": "Poner el focus en el bóton de confirmar",
+                "default": "false"
+              },
+              {
+                "name": "focusCancel",
+                "type": "boolean",
+                "description": "Poner el focus en el bóton de cancelar",
+                "default": "true"
+              },
+              {
+                "name": "theme",
+                "type": "'sweetalert2' | 'material'",
+                "description": "Tipo de tema, SweetAlert2 o Material",
+                "default": "sweetalert2"
+              },
+              {
+                "name": "materialButtonsColor",
+                "type": "string",
+                "description": "Color de los bótones cuando la alerta es material design",
+                "default": "undefined"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "UrxFormatModule",
+        "elements": [
+          {
+            "name": "InputMaskDirective",
+            "access": "directive",
+            "bookmark": "",
+            "description": "La directiva InputMask con ayuda de inputmask.js nos ayudará convertir cualquier input en uno con una entrada específica que queramos ya sea, de números letras o un formato",
+            "html": null,
+            "exampleCodes": [
+              {
+                "title": "Añadiendo el módulo de formatos",
+                "description": "Para poder utilizar los formatos de Ng-urxnium es necesario incluir el módulo UrxFormatModule",
+                "code": "import { NgModule } from '@angular/core';\n\nimport { UrxFormatModule } from 'ng-urxnium';\n\n@NgModule({\n  imports: [\n    UrxFormatModule\n  ],\n  ...\n})\nexport class AppModule { }",
+                "out": null,
+                "language": "javascript"
+              },
+              {
+                "title": "Dando mask a un input",
+                "description": "Para añadir un mask a un input es tan fácil como usar la directiva y especificar un formato",
+                "code": "<input inputMask mask=\"999-999\">",
+                "out": null,
+                "language": "javascript"
+              },
+              {
+                "title": "Añadiendo un aliases",
+                "description": "A Veces podemos necesitar formatos más específicos por eso también se pueden añadir alices",
+                "code": "Aplicación en typescript\n\nmaskAliases = {\n    pesos: {\n      suffix: ' MNX',\n      groupSeparator: '.',\n      alias: 'numeric',\n      placeholder: '0',\n      autoGroup: true,\n      digits: 2,\n      digitsOptional: false,\n      clearMaskOnLostFocus: false,\n      rightAlign: false\n    }\n  };",
+                "out": "Aplicación en html\n\n<input\n  inputMask\n  mask=\"pesos\"\n  [aliases]=\"maskAliases\"\n>",
+                "language": "javascript"
+              }
+            ],
+            "attributes": [
+              {
+                "name": "mask",
+                "type": "string",
+                "description": "Mascara que se aplicara al input",
+                "default": "undefined"
+              },
+              {
+                "name": "aliases",
+                "type": "object",
+                "description": "Definición de inputmask de un aliases",
+                "default": "undefined"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "UrxLocationModule",
+        "elements": [
+          {
+            "name": "GoogleMapDirective",
+            "access": "directive",
+            "bookmark": "",
+            "description": "",
+            "html": null,
+            "exampleCodes": [
+              {
+                "title": "",
+                "description": "",
+                "code": null,
+                "out": null,
+                "language": "javascript"
+              }
+            ],
+            "attributes": [
+              {
+                "name": "",
+                "type": "",
+                "description": "",
+                "default": ""
+              }
+            ]
+          },
+          {
+            "name": "InputGoogleMapDirective",
+            "access": "directive",
+            "bookmark": "",
+            "description": "",
+            "html": null,
+            "exampleCodes": [
+              {
+                "title": "",
+                "description": "",
+                "code": null,
+                "out": null,
+                "language": "javascript"
+              }
+            ],
+            "attributes": [
+              {
+                "name": "",
+                "type": "",
+                "description": "",
+                "default": ""
+              }
+            ]
+          },
+          {
+            "name": "GoogleMapSearchDirective",
+            "access": "directive",
+            "bookmark": "",
+            "description": "",
+            "html": null,
+            "exampleCodes": [
+              {
+                "title": "",
+                "description": "",
+                "code": null,
+                "out": null,
+                "language": "javascript"
+              }
+            ],
+            "attributes": [
+              {
+                "name": "",
+                "type": "",
+                "description": "",
+                "default": ""
+              }
+            ]
+          },
+          {
+            "name": "InputGoogleMapSearchDirective",
+            "access": "directive",
+            "bookmark": "",
+            "description": "",
+            "html": null,
+            "exampleCodes": [
+              {
+                "title": "",
+                "description": "",
+                "code": null,
+                "out": null,
+                "language": "javascript"
+              }
+            ],
+            "attributes": [
+              {
+                "name": "",
+                "type": "",
+                "description": "",
+                "default": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "UrxSessionModule",
+        "elements": [
+          {
+            "name": "SessionService",
+            "access": "service",
+            "bookmark": "",
+            "description": "",
+            "html": null,
+            "exampleCodes": [
+              {
+                "title": "",
+                "description": "",
+                "code": null,
+                "out": null,
+                "language": "javascript"
+              }
+            ],
+            "attributes": [
+              {
+                "name": "",
+                "type": "",
+                "description": "",
+                "default": ""
+              }
+            ]
+          },
+          {
+            "name": "SignInWindowService",
+            "access": "service",
+            "bookmark": "",
+            "description": "",
+            "html": null,
+            "exampleCodes": [
+              {
+                "title": "",
+                "description": "",
+                "code": null,
+                "out": null,
+                "language": "javascript"
+              }
+            ],
+            "attributes": [
+              {
+                "name": "",
+                "type": "",
+                "description": "",
+                "default": ""
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

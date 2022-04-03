@@ -4,7 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { DemoComponent } from './demo/demo.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { UrxAlertModule, UrxFormatModule } from 'ng-urxnium';
+import { UrxAlertModule, UrxLocationModule, UrxFormatModule } from 'ng-urxnium';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,9 @@ import { UrxAlertModule, UrxFormatModule } from 'ng-urxnium';
     BrowserModule,
     BrowserAnimationsModule,
     UrxAlertModule,
-    UrxFormatModule
+    UrxLocationModule,
+    UrxFormatModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

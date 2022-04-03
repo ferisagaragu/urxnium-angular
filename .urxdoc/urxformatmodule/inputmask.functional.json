@@ -1,0 +1,41 @@
+{
+  "name": "InputMaskDirective",
+  "access": "directive",
+  "bookmark": "",
+  "description": "La directiva InputMask con ayuda de inputmask.js nos ayudará convertir cualquier input en uno con una entrada específica que queramos ya sea, de números letras o un formato",
+  "html": null,
+  "exampleCodes": [
+    {
+      "title": "Añadiendo el módulo de formatos",
+      "description": "Para poder utilizar los formatos de Ng-urxnium es necesario incluir el módulo UrxFormatModule",
+      "code": "import { NgModule } from '@angular/core';\n\nimport { UrxFormatModule } from 'ng-urxnium';\n\n@NgModule({\n  imports: [\n    UrxFormatModule\n  ],\n  ...\n})\nexport class AppModule { }",
+      "out": null,
+      "language": "javascript"
+    },{
+      "title": "Dando mask a un input",
+      "description": "Para añadir un mask a un input es tan fácil como usar la directiva y especificar un formato",
+      "code": "<input inputMask mask=\"999-999\">",
+      "out": null,
+      "language": "javascript"
+    },{
+      "title": "Añadiendo un aliases",
+      "description": "A Veces podemos necesitar formatos más específicos por eso también se pueden añadir alices",
+      "code": "Aplicación en typescript\n\nmaskAliases = {\n    pesos: {\n      suffix: ' MNX',\n      groupSeparator: '.',\n      alias: 'numeric',\n      placeholder: '0',\n      autoGroup: true,\n      digits: 2,\n      digitsOptional: false,\n      clearMaskOnLostFocus: false,\n      rightAlign: false\n    }\n  };",
+      "out": "Aplicación en html\n\n<input\n  inputMask\n  mask=\"pesos\"\n  [aliases]=\"maskAliases\"\n>",
+      "language": "javascript"
+    }
+  ],
+  "attributes": [
+    {
+      "name": "mask",
+      "type": "string",
+      "description": "Mascara que se aplicara al input",
+      "default": "undefined"
+    },{
+      "name": "aliases",
+      "type": "object",
+      "description": "Definición de inputmask de un aliases",
+      "default": "undefined"
+    }
+  ]
+}

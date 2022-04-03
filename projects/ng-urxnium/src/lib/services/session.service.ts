@@ -3,11 +3,13 @@ import { BehaviorSubject, Observable, Subscriber } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Session } from '../interfaces/session';
 import { map } from 'rxjs/operators';
+import { BASE_URL, REFRESH_TOKEN_URL, VALIDATE_TOKEN_URL } from '../const/session.const';
 
 @Injectable()
 export class SessionService {
 
   public onSignIn: BehaviorSubject<boolean>;
+  public onValidateTokenLoad: BehaviorSubject<boolean>;
 
   private count: boolean;
   private firstSignIn: boolean;
@@ -16,9 +18,12 @@ export class SessionService {
 
   constructor(
     private http: HttpClient,
-    @Inject('baseUrl') private baseUrl: string
+    @Inject(BASE_URL) private baseUrl: string,
+    @Inject(VALIDATE_TOKEN_URL) private validateTokenUrl: string,
+    @Inject(REFRESH_TOKEN_URL) private  refreshTokenUrl: string
   ) {
     this.onSignIn = new BehaviorSubject(false);
+    this.onValidateTokenLoad = new BehaviorSubject(false);
     this.count = true;
     this.firstSignIn = false;
     this.user = JSON.parse(localStorage.getItem('user'));
@@ -62,6 +67,7 @@ export class SessionService {
             this.refreshToken().subscribe(session => {
               this.setSignIn(session, observable);
             }, _ => {
+              this.onValidateTokenLoad.error({});
               this.setSignOut(observable);
             });
           }
@@ -77,8 +83,10 @@ export class SessionService {
   }
 
   private validateToken(): Observable<Session> {
+    this.onValidateTokenLoad.next(true);
+
     return this.http.get(
-      `${this.baseUrl}/auth/validate-token`,
+      `${this.validateTokenUrl}`,
       { headers: this.headers }
     ).pipe(map((resp: any) => {
       const session = resp.data.session;
@@ -86,6 +94,7 @@ export class SessionService {
 
       this.user = resp.data;
       localStorage.setItem('user', JSON.stringify(resp.data));
+      this.onValidateTokenLoad.next(false);
 
       return session;
     }));
@@ -93,7 +102,7 @@ export class SessionService {
 
   private refreshToken(): Observable<Session> {
     return this.http.post(
-      `${this.baseUrl}/auth/refresh-token`,
+      `${this.refreshTokenUrl}`,
       { refreshToken: localStorage.getItem('refreshToken') }
     ).pipe(map((resp: any) => resp.data as Session));
   }

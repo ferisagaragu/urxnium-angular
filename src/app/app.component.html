@@ -77,4 +77,41 @@ Demo ng-urx
   </div>
 </div>
 
-<input inputMask mask="pesos" [aliases]="maskAlises">
+<input
+  inputMask
+  mask="pesos"
+  [aliases]="maskAliases"
+>
+
+<input googleMapsSearch style="width: 100%" placeholder="Nueva ubicacion">
+
+<button (click)="sesigue()">
+  Otro
+</button>
+
+<form [formGroup]="form" (ngSubmit)="save()" style="height: 300px">
+  <input
+    inputGoogleMap
+    formControlName="map"
+    [zoom]="15"
+    [disableDefaultUI]="true"
+    [fullscreenControl]="true"
+  >
+
+  <button>
+    Eso we
+  </button>
+</form>
+
+<!--<div
+  googleMap
+  [viewMode]="true"
+  [zoom]="15"
+  [disableDefaultUI]="true"
+  [fullscreenControl]="true"
+>
+</div>
+
+
+[lat]="20.4544877"
+  [lng]="-103.5089911"-->

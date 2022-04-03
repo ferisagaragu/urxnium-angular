@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "start-library": "ng build --project ng-urxnium --watch",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"

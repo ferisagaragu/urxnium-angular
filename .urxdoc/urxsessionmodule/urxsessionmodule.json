@@ -1,0 +1,7 @@
+{
+  "name": "UrxSessionModule",
+  "elements": [
+    ".urxdoc/urxsessionmodule/sessionservice.functional.json",
+    ".urxdoc/urxsessionmodule/signinwindowservice.functional.json"
+  ]
+}

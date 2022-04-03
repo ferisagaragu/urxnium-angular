@@ -1,0 +1,6 @@
+{
+  "name": "UrxAlertModule",
+  "elements": [
+    ".urxdoc/urxalertmodule/swalalert2service.functional.json"
+  ]
+}

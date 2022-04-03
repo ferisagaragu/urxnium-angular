@@ -1,0 +1,16 @@
+{
+  "functional": {
+    "title": "Ng-urxnium",
+    "description": "Libreria de componentes graficos para Angular <a href=\"google.com\">Link</a>",
+    "icon": "",
+    "version": "2.2.5",
+    "bookmarks": [],
+    "src": [
+      ".urxdoc/urxgridmodule/urxgridmodule.json",
+      ".urxdoc/urxalertmodule/urxalertmodule.json",
+      ".urxdoc/urxformatmodule/urxformatmodule.json",
+      ".urxdoc/urxlocationmodule/urxlocationmodule.json",
+      ".urxdoc/urxsessionmodule/urxsessionmodule.json"
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "UrxFormatModule",
+  "elements": [
+    ".urxdoc/urxformatmodule/inputmask.functional.json"
+  ]
+}

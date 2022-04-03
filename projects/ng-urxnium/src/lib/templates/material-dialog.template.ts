@@ -1,11 +1,11 @@
 export const materialDialog = (icon, title, text) => `
   <div class="swal-material-container">
-    <div class="urx-row">
-      <div class="urx-col-1">
+    <div class="urx-row-dialog">
+      <div class="urx-col-1-dialog">
         ${ generateSvgIcon(icon) }
       </div>
 
-      <div class="urx-col-11 swal-material-title-container">
+      <div class="urx-col-11-dialog swal-material-title-container">
         <strong class="swal-material-title">
           ${ title }
         </strong>

@@ -1,0 +1,6 @@
+{
+  "name": "UrxGridModule",
+  "elements": [
+    ".urxdoc/urxgridmodule/urx-grid.functional.json"
+  ]
+}
