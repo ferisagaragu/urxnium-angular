@@ -7,6 +7,9 @@ export * from './lib/interfaces/session';
 export * from './lib/interfaces/sweet-alert-2-message';
 export * from './lib/interfaces/address';
 
+//Const
+export * from './lib/const/session.const';
+
 //Guards
 export * from './lib/guards/authorized.guard';
 export * from './lib/guards/unauthorized.guard';

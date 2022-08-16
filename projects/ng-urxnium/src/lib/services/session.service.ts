@@ -58,6 +58,18 @@ export class SessionService {
         localStorage.getItem('expirationDate') &&
         localStorage.getItem('refreshToken') &&
         localStorage.getItem('user') &&
+        (new Date(localStorage.getItem('expirationDate')) > new Date()) &&
+        !this.firstSignIn
+      ) {
+        this.setSignIn(null, observable);
+        this.onValidateTokenLoad.next(false);
+      } else if (
+        localStorage.getItem('token') &&
+        localStorage.getItem('expiration') &&
+        localStorage.getItem('expirationDate') &&
+        localStorage.getItem('refreshToken') &&
+        localStorage.getItem('user') &&
+        !(new Date(localStorage.getItem('expirationDate')) > new Date()) &&
         !this.firstSignIn
       ) {
         this.validateToken().subscribe(
@@ -66,6 +78,7 @@ export class SessionService {
           }, _ => {
             this.refreshToken().subscribe(session => {
               this.setSignIn(session, observable);
+              this.onValidateTokenLoad.next(false);
             }, _ => {
               this.onValidateTokenLoad.error({});
               this.setSignOut(observable);

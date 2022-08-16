@@ -1,6 +1,6 @@
 {
   "name": "ng-urxnium",
-  "version": "2.4.6",
+  "version": "2.6.10",
   "peerDependencies": {
     "@angular/common": "^12.1.2",
     "@angular/core": "^12.1.2"
